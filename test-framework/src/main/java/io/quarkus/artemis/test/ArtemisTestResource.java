@@ -12,6 +12,7 @@ import org.apache.commons.io.FileUtils;
 import io.quarkus.test.common.QuarkusTestResourceLifecycleManager;
 
 public class ArtemisTestResource implements QuarkusTestResourceLifecycleManager {
+
     private static final String DEFAULT_CONFIGURATION_NAME = "<default>";
     private static final String QUARKUS_ARTEMIS_CONFIG_PREFIX = "quarkus.artemis";
 
