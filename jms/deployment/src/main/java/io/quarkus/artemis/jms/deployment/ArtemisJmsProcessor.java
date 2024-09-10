@@ -29,7 +29,6 @@ import io.quarkus.jms.spi.deployment.ConnectionFactoryWrapperBuildItem;
 
 @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
 public class ArtemisJmsProcessor {
-
     private static final String FEATURE = "artemis-jms";
 
     @SuppressWarnings("unused")
