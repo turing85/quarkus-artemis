@@ -1,4 +1,4 @@
-name: Comment on PR
+name: Quarkiverse Create Initial Comment on PR
 
 on:
   pull_request_target:
@@ -11,6 +11,10 @@ on:
       - '*.txt'
       - '.all-contributorsrc'
 
+defaults:
+  run:
+    shell: bash
+
 permissions:
   pull-requests: write
 
@@ -21,15 +25,6 @@ concurrency:
 jobs:
   comment:
     name: Create PR comment
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: (Re)create comment
-        uses: turing85/publish-report@v2
-        with:
-          github-token: ${{ github.token }}
-          comment-message-recreate: |
-            ## 🚦Reports 🚦
-            Reports will be posted here as they get available.
-          comment-message-pr-number: ${{ github.event.number }}
-          recreate-comment: true
+    uses: turing85/quarkiverse-github/.github/workflows/perform-post-comment.yml@feature/add-pr-decoration
+    with:
+      report-config-file: .github/report-config.yml
