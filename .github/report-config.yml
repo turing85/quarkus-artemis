@@ -1,0 +1,7 @@
+reports:
+  - name: JUnit JVM Test
+    path: '**/target/*-reports/TEST*.xml'
+    artifact-pattern: test-report-jvm-*
+  - name: JUnit Native Test
+    path: '**/target/*-reports/TEST*.xml'
+    artifact-pattern: test-report-native-*
