@@ -18,7 +18,6 @@ import io.quarkus.runtime.annotations.Recorder;
 
 @Recorder
 public class ArtemisJmsRecorder {
-
     public Function<ConnectionFactory, Object> getDefaultWrapper() {
         return cf -> cf;
     }
